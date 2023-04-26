@@ -10,6 +10,11 @@ const Budget = () => {
     }, 0);
 
     const handleChange = (val) => {
+        if(val>20000) {
+            alert('The upper limit value is 20,000')
+            return;
+        }
+
         if (val > totalExpenses) {
             setBudgetValue(val)
             dispatch({
@@ -23,7 +28,7 @@ const Budget = () => {
 
     return (
         <div className='alert alert-secondary'>
-            <span>Budget:{currency}<input value={budgetValue} type="number" onChange={(e) => handleChange(e.target.value)} /></span>
+            <span>Budget:{currency}<input step="10" max="20000" value={budgetValue} type="number" onChange={(e) => handleChange(e.target.value)} /></span>
         </div>
     );
 };

@@ -37,10 +37,7 @@
   }
 }
 
-
-  .currency {
-    color: black; width:200px;
-  }
-  
-  .currency option { background:#000; color:#fff}
-  .currency option:hover { background:green; color:#000}
+.react-select__option{
+    background-color: #93e499;
+    color: #000
+}
